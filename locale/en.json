@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Image Generation",
+    "description": "Exposes Qwen-Image / OpenAI-compatible text-to-image endpoints as a generate_image tool so the model can draw and show images inline."
+  }
+}

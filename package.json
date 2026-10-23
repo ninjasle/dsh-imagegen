@@ -1,0 +1,57 @@
+{
+  "name": "dsh-imagegen",
+  "version": "0.3.0",
+  "description": "DeepSeek Harness 插件：文生图（DashScope Qwen-Image / OpenAI 兼容端点），输入框按钮 + 设置页可改接口地址、模型名、API Key",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "image-generation",
+    "text-to-image",
+    "qwen-image",
+    "dashscope"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "author": {
+    "name": "TODO-YOUR-NAME"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TODO-YOUR-USERNAME/dsh-imagegen.git"
+  },
+  "homepage": "https://github.com/TODO-YOUR-USERNAME/dsh-imagegen#readme",
+  "bugs": {
+    "url": "https://github.com/TODO-YOUR-USERNAME/dsh-imagegen/issues"
+  }
+}

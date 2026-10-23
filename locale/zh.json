@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "图片生成",
+    "description": "把千问-Image / OpenAI 兼容的文生图端点接成 generate_image 工具，模型可以直接作图并显示在对话里。"
+  }
+}
