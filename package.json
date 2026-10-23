@@ -1,5 +1,5 @@
 {
-  "name": "dsh-imagegen",
+  "name": "@danenze/dsh-imagegeneration",
   "version": "0.3.0",
   "description": "DeepSeek Harness 插件：文生图（DashScope Qwen-Image / OpenAI 兼容端点），输入框按钮 + 设置页可改接口地址、模型名、API Key",
   "type": "module",

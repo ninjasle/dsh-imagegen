@@ -23,23 +23,28 @@
 
 前提：DSH ≥ 0.2，profile 里已装载 `@deepseek-ai/dsh-tools`（默认就有）与 `@deepseek-ai/dsh-settings`（Web profile 默认就有）。
 
-在 DSH 会话里让 agent 安装，或直接调 `plugin_manager` 工具：
+**已发布到 npm**：<https://www.npmjs.com/package/@danenze/dsh-imagegeneration>
+
+在 DSH 会话里让 agent 安装，或直接调 `plugin_manager` 工具，三选一：
 
 ```
+# 1) npm（推荐，版本可锁）
+plugin_manager(action: "install_bundle", target: "@danenze/dsh-imagegeneration")
+
+# 2) GitHub 源码
 plugin_manager(action: "install_bundle", target: "github:ninjasle/dsh-imagegen")
-```
 
-也可以指向本地源码目录（绝对路径）：
-
-```
+# 3) 本地源码目录（绝对路径）
 plugin_manager(action: "install_bundle", target: "/path/to/dsh-imagegen")
 ```
 
 安装成功后：
 
-- profile 的 `package.json` 出现 `"dsh-imagegen": "github:ninjasle/dsh-imagegen"`
-- `dsh.profile.bundles` 末尾出现 `dsh-imagegen`
+- profile 的 `package.json` 出现 `"@danenze/dsh-imagegeneration": "0.3.0"`（或 `link:` / `github:` 形式）
+- `dsh.profile.bundles` 末尾出现 `@danenze/dsh-imagegeneration`
 - 重启一次 DSH Web / 桌面端（宿主插件在启动时组装，没有热更）
+
+> npm 包名带 `@danenze/` 前缀是因为 `dsh-image-generation` 这个无前缀名字已被别人占用，且 `dsh-imagegeneration` 被 npm 判为“与已有包过于相似”而拒收。
 
 ## 使用
 

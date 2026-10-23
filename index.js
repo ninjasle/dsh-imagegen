@@ -1,5 +1,5 @@
 /**
- * dsh-imagegen —— 给 DeepSeek Harness 接上「文生图」能力。
+ * @danenze/dsh-imagegeneration —— 给 DeepSeek Harness 接上「文生图」能力。
  *
  * 为什么要有这个插件：LLM provider（llm-pi-ai）只串「文本进、文本出」的 chat 路由，
  * 图像模型（qwen-image-*）不是 chat 模型，配进 provider 会 404
@@ -28,7 +28,7 @@ import { homedir } from 'node:os'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import z from '@deepseek-ai/schemastery'
 
-export const name = 'dsh-imagegen'
+export const name = '@danenze/dsh-imagegeneration'
 /**
  * `tools` 是必需的：没有它就不注册工具。
  * `settings` 是可选的服务（见 apply 里的 ctx.inject），只用来把本 entry 标记成
@@ -104,7 +104,7 @@ function cfg(config) {
 
 function log(message) {
   try {
-    process.stderr.write('[dsh-imagegen] ' + message + '\n')
+    process.stderr.write('[@danenze/dsh-imagegeneration] ' + message + '\n')
   } catch {
     /* 无控制台时放弃报告 */
   }
@@ -403,7 +403,7 @@ function registerPromptGuidance(ctx) {
   ctx.inject(['systemPrompt'], (child) => {
     child.effect(() =>
       child.systemPrompt.section({
-        name: 'plugin:dsh-imagegen',
+        name: 'plugin:@danenze/dsh-imagegeneration',
         order: 3001,
         text: PROMPT_GUIDANCE,
       }),

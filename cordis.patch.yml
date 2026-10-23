@@ -1,4 +1,4 @@
-# dsh-imagegen bundle patch。
+# @danenze/dsh-imagegeneration bundle patch。
 # 只做 insert，纯文本、无需构建。config 可选项见 index.js 的 Config：
 #   provider        dashscope（默认）| openai
 #   baseURL         默认 https://dashscope.aliyuncs.com
@@ -10,8 +10,8 @@
 #   outputDir       图片落盘目录（默认 $DSH_HOME/imagegen）
 #   timeoutMs       单次生成超时（默认 180000）
 - insert:
-    - id: 'dsh-imagegen'
-      name: 'dsh-imagegen'
+    - id: '@danenze/dsh-imagegeneration'
+      name: '@danenze/dsh-imagegeneration'
       config:
         provider: dashscope
         model: qwen-image-3.0
