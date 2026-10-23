@@ -26,7 +26,7 @@
 在 DSH 会话里让 agent 安装，或直接调 `plugin_manager` 工具：
 
 ```
-plugin_manager(action: "install_bundle", target: "github:YOUR-USERNAME/dsh-imagegen")
+plugin_manager(action: "install_bundle", target: "github:ninjasle/dsh-imagegen")
 ```
 
 也可以指向本地源码目录（绝对路径）：
@@ -37,7 +37,7 @@ plugin_manager(action: "install_bundle", target: "/path/to/dsh-imagegen")
 
 安装成功后：
 
-- profile 的 `package.json` 出现 `"dsh-imagegen": "github:YOUR-USERNAME/dsh-imagegen"`
+- profile 的 `package.json` 出现 `"dsh-imagegen": "github:ninjasle/dsh-imagegen"`
 - `dsh.profile.bundles` 末尾出现 `dsh-imagegen`
 - 重启一次 DSH Web / 桌面端（宿主插件在启动时组装，没有热更）
 

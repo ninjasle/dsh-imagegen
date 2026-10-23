@@ -44,14 +44,15 @@
     "node": ">=20"
   },
   "author": {
-    "name": "TODO-YOUR-NAME"
+    "name": "ninjasle",
+    "url": "https://github.com/ninjasle"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TODO-YOUR-USERNAME/dsh-imagegen.git"
+    "url": "https://github.com/ninjasle/dsh-imagegen.git"
   },
-  "homepage": "https://github.com/TODO-YOUR-USERNAME/dsh-imagegen#readme",
+  "homepage": "https://github.com/ninjasle/dsh-imagegen#readme",
   "bugs": {
-    "url": "https://github.com/TODO-YOUR-USERNAME/dsh-imagegen/issues"
+    "url": "https://github.com/ninjasle/dsh-imagegen/issues"
   }
 }
