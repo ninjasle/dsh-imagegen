@@ -54,5 +54,8 @@
   "homepage": "https://github.com/ninjasle/dsh-imagegen#readme",
   "bugs": {
     "url": "https://github.com/ninjasle/dsh-imagegen/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
